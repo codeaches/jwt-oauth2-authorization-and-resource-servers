@@ -20,50 +20,50 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 @EnableAuthorizationServer
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
-	@Autowired
-	DataSource ds;
+    @Autowired
+    DataSource ds;
 
-	@Autowired
-	AuthenticationManager authMgr;
+    @Autowired
+    AuthenticationManager authMgr;
 
-	@Autowired
-	private UserDetailsService usrSvc;
+    @Autowired
+    private UserDetailsService usrSvc;
 
-	@Bean("clientPasswordEncoder")
-	PasswordEncoder clientPasswordEncoder() {
-		return new BCryptPasswordEncoder(8);
-	}
+    @Bean("clientPasswordEncoder")
+    PasswordEncoder clientPasswordEncoder() {
+	return new BCryptPasswordEncoder(8);
+    }
 
-	@Bean
-	JwtAccessTokenConverter jwtAccessTokenConverter() {
-		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-		converter.setSigningKey("JWTKey@123");
-		return converter;
-	}
+    @Bean
+    JwtAccessTokenConverter jwtAccessTokenConverter() {
+	JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+	converter.setSigningKey("JWTKey@123");
+	return converter;
+    }
 
-	@Override
-	public void configure(AuthorizationServerSecurityConfigurer cfg) throws Exception {
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer cfg) throws Exception {
 
-		// Enable /oauth/token_key URL used by resource server to validate JWT tokens
-		cfg.tokenKeyAccess("permitAll");
+	// Enable /oauth/token_key URL used by resource server to validate JWT tokens
+	cfg.tokenKeyAccess("permitAll");
 
-		// Enable /oauth/check_token URL
-		cfg.checkTokenAccess("permitAll");
+	// Enable /oauth/check_token URL
+	cfg.checkTokenAccess("permitAll");
 
-		// BCryptPasswordEncoder(8) is used for oauth_client_details.user_secret
-		cfg.passwordEncoder(clientPasswordEncoder());
-	}
+	// BCryptPasswordEncoder(8) is used for oauth_client_details.user_secret
+	cfg.passwordEncoder(clientPasswordEncoder());
+    }
 
-	@Override
-	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.jdbc(ds);
-	}
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+	clients.jdbc(ds);
+    }
 
-	@Override
-	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 
-		endpoints.accessTokenConverter(jwtAccessTokenConverter());
-		endpoints.authenticationManager(authMgr);
-		endpoints.userDetailsService(usrSvc);
-	}
+	endpoints.accessTokenConverter(jwtAccessTokenConverter());
+	endpoints.authenticationManager(authMgr);
+	endpoints.userDetailsService(usrSvc);
+    }
 }
