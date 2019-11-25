@@ -16,3 +16,4 @@
 
 [CircleCI badge]: https://circleci.com/gh/codeaches/jwt-oauth2-authorization-and-resource-servers.svg?style=shield&circle-token=:circle-token
 [CircleCI]: https://circleci.com/gh/codeaches/jwt-oauth2-authorization-and-resource-servers
+
