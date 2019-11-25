@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "61193e44-eb16-4443-bcd4-4891ae4ded8a",
+		"name": "jwt-ouath2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "jwt-authorization-server",
+			"item": [
+				{
+					"name": "get-token-kelly",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "appclient@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "appclient",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "kelly@123",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "kelly",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-token-kelly",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2FySW52ZW50b3J5Il0sInVzZXJfbmFtZSI6ImtlbGx5Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTU3NDc0MzIxMSwiYXV0aG9yaXRpZXMiOlsiSU5WRU5UT1JZX1ZJRVciXSwianRpIjoiNDk0OGMwOGYtNWQ3ZS00NzU0LWI3Y2UtOGRlZTBmYzhkOTlhIiwiY2xpZW50X2lkIjoiYXBwY2xpZW50In0.oe2u3QPthP5IIn4dyv_WKPNKiyIKyJ2PL0qiorWAMvA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/check_token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"check_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-token-john",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "appclient@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "appclient",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "kelly@123",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "kelly",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-token-john",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2FySW52ZW50b3J5Il0sInVzZXJfbmFtZSI6ImtlbGx5Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTU3NDc0MzIxMSwiYXV0aG9yaXRpZXMiOlsiSU5WRU5UT1JZX1ZJRVciXSwianRpIjoiNDk0OGMwOGYtNWQ3ZS00NzU0LWI3Y2UtOGRlZTBmYzhkOTlhIiwiY2xpZW50X2lkIjoiYXBwY2xpZW50In0.oe2u3QPthP5IIn4dyv_WKPNKiyIKyJ2PL0qiorWAMvA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/check_token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"check_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token-kelly",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "appclient@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "appclient",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2FySW52ZW50b3J5Il0sInVzZXJfbmFtZSI6ImtlbGx5Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjQ5NDhjMDhmLTVkN2UtNDc1NC1iN2NlLThkZWUwZmM4ZDk5YSIsImV4cCI6MTU3NDc0MzIxMSwiYXV0aG9yaXRpZXMiOlsiSU5WRU5UT1JZX1ZJRVciXSwianRpIjoiNzkwNTM1ZDEtZTA2NC00YzI0LWE3ZGMtOGQ3M2QyODRiNTZjIiwiY2xpZW50X2lkIjoiYXBwY2xpZW50In0.W4pFg0_x0DhtTSGVPzbPncX375FBXq-huvA6UMW1CRg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token-john",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "appclient@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "appclient",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2FySW52ZW50b3J5Il0sInVzZXJfbmFtZSI6ImtlbGx5Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjQ5NDhjMDhmLTVkN2UtNDc1NC1iN2NlLThkZWUwZmM4ZDk5YSIsImV4cCI6MTU3NDc0MzIxMSwiYXV0aG9yaXRpZXMiOlsiSU5WRU5UT1JZX1ZJRVciXSwianRpIjoiNzkwNTM1ZDEtZTA2NC00YzI0LWE3ZGMtOGQ3M2QyODRiNTZjIiwiY2xpZW50X2lkIjoiYXBwY2xpZW50In0.W4pFg0_x0DhtTSGVPzbPncX375FBXq-huvA6UMW1CRg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
