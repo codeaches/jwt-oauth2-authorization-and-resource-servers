@@ -128,7 +128,7 @@
 							"urlencoded": [
 								{
 									"key": "password",
-									"value": "kelly@123",
+									"value": "john@123",
 									"type": "text"
 								},
 								{
@@ -138,7 +138,7 @@
 								},
 								{
 									"key": "username",
-									"value": "kelly",
+									"value": "john",
 									"type": "text"
 								}
 							]
@@ -178,7 +178,7 @@
 							"urlencoded": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2FySW52ZW50b3J5Il0sInVzZXJfbmFtZSI6ImtlbGx5Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImV4cCI6MTU3NDc0MzIxMSwiYXV0aG9yaXRpZXMiOlsiSU5WRU5UT1JZX1ZJRVciXSwianRpIjoiNDk0OGMwOGYtNWQ3ZS00NzU0LWI3Y2UtOGRlZTBmYzhkOTlhIiwiY2xpZW50X2lkIjoiYXBwY2xpZW50In0.oe2u3QPthP5IIn4dyv_WKPNKiyIKyJ2PL0qiorWAMvA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiY2FySW52ZW50b3J5Il0sInVzZXJfbmFtZSI6ImpvaG4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTc0NzQ0MTkzLCJhdXRob3JpdGllcyI6WyJJTlZFTlRPUllfQUREIiwiSU5WRU5UT1JZX1ZJRVciXSwianRpIjoiMDBmZThjNjctZTgzYy00ZDYyLWJlOTQtZGY0YmFkNDhiM2M2IiwiY2xpZW50X2lkIjoiYXBwY2xpZW50In0.cm1dnWoxeH1DQVh_AC9jAWB9iBOBlur676MdeNpGknY",
 									"type": "text"
 								}
 							]
@@ -293,6 +293,150 @@
 							"path": [
 								"oauth",
 								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "jwt-car-inventory-service",
+			"item": [
+				{
+					"name": "viewCars-kelly",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "85a15d59-1139-4e1b-ac44-8dfa3fc1656a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/viewCars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"viewCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCars-kelly",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "be2e8b5b-9357-4cc8-a312-142d9873dc18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"car\":\"civic\"}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/addCars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"addCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewCars-john",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "85a15d59-1139-4e1b-ac44-8dfa3fc1656a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/viewCars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"viewCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCars-john",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "be2e8b5b-9357-4cc8-a312-142d9873dc18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"car\":\"civic\"}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/addCars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"addCars"
 							]
 						}
 					},
