@@ -8,7 +8,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableResourceServer
 public class JwtCarInventoryServiceApplication {
 
-    public static void main(String[] args) {
-	SpringApplication.run(JwtCarInventoryServiceApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(JwtCarInventoryServiceApplication.class, args);
+  }
 }
