@@ -1,4 +1,4 @@
-package com.codeaches.oauth2.jwt.carinventoryservice;
+package com.codeaches.carinventoryservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

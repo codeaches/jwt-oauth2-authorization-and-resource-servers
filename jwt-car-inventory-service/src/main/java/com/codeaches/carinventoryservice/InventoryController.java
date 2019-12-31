@@ -1,4 +1,4 @@
-package com.codeaches.oauth2.jwt.carinventoryservice;
+package com.codeaches.carinventoryservice;
 
 import java.util.HashMap;
 import java.util.HashSet;
